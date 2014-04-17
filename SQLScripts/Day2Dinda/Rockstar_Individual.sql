@@ -1,3 +1,6 @@
+CREATE Database RockStar;
+CREATE TABLE Individual
+
 USE RockStar;
 SHOW COLUMNS FROM Individual;
 describe Individual;

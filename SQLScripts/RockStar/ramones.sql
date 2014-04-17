@@ -23,3 +23,11 @@ VALUES
 , ('Ramone','Johnny','1948-10-08','2004-09-15')
 , ('Ramone','Dee Dee','1951-09-18',NULL);
 
+Select * From Ramones;
+
+Insert Into Individual (LastName, FirstName, Birthdate, DeceasedDate)
+Select LastName, FirstName, Birthdate, DeceasedDate
+From Ramones
+Order By DateAdded;
+
+Select * From Individual;
