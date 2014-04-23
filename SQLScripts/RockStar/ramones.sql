@@ -146,4 +146,25 @@ SELECT 7 BETWEEN 7 and 10;
 
 SELECT 1. BETWEEN .5 and 10;
 
-SELECT  * FROM Individual WHERE LASTNAME BETWEEN 'A' and 'Cobain' ORDER BY LASTNAME;
+SELECT  * FROM Individual WHERE LASTNAME BETWEEN 'A' and '' ORDER BY LASTNAME;
+
+SELECT id, firstname, lastname, birthdate, deceaseddate FROM individual
+WHERE DeceasedDate is null;
+
+SELECT id, firstname, lastname, birthdate, deceaseddate FROM individual
+WHERE birthdate is null;
+
+SELECT id, firstname, lastname, birthdate, deceaseddate FROM individual
+WHERE birthdate is not null;
+
+SELECT id, firstname, lastname, birthdate, deceaseddate FROM individual
+WHERE YEAR(birthdate) BETWEEN '1939' AND '1950';
+
+SELECT * FROM Individual 
+WHERE DeceasedDate is not Null;
+
+SELECT ID, LastName, FirstName, ifnull (DeceasedDate, 'Not Dead Yet') as isdead from Individual;
+
+SELECT COALESCE(DeceasedDate, 'Not Dead') as TheValue from Individual;
+
+SELECT ID, LastName, FirstName, BirthDate, DeceasedDate, coalesce(DeceasedDate, 'BirthDate, 'not dead yet') as isdead from Individual;
