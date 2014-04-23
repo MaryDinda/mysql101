@@ -114,3 +114,36 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DESCRIBE bandmembers;
 
 SHOW FULL COLUMNS FROM bandmembers;
+
+SELECT * FROM bandmembers;
+
+SELECT lastname, firstname, CONCAT(firstname, ' ' , lastname) AS fullname 
+FROM bandmembers;
+
+
+SELECT lastname, firstname, YEAR(birthdate) as birthyear
+FROM bandmembers;
+
+SELECT 'A' < 'B';
+
+SELECT 'BA' < 'C';
+
+SELECT '2' > '1';
+
+SELECT 3 = (2+1);
+
+SELECT '3' = (2+1);
+
+SELECT * FROM Individual WHERE BIRTHDATE IS NULL;
+
+SELECT * FROM Individual WHERE Birthdate IS NOT NULL;
+
+SELECT 'y' BETWEEN 'x' and 'z';
+
+SELECT 'ABC' BETWEEN 'AAA' and 'BBB';
+
+SELECT 7 BETWEEN 7 and 10;
+
+SELECT 1. BETWEEN .5 and 10;
+
+SELECT  * FROM Individual WHERE LASTNAME BETWEEN 'A' and 'Cobain' ORDER BY LASTNAME;
