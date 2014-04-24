@@ -9,6 +9,6 @@ DETERMINISTIC
 RETURN (1.8 * celsius) + 32;
 
 
-SELECT fnCelsiusToFahrenheit(20) as fahrenheit;
+SELECT fnCelsiusToFahrenheit(60) as fahrenheit;
 
 
